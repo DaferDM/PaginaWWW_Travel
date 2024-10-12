@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Wide Web Travel - Descubre el mundo de una manera única</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #FF4E50, #FC913A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .bg-image-overlay {
+            position: relative;
+        }
+        .bg-image-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(255,78,80,0.7), rgba(252,145,58,0.7));
+            z-index: 1;
+        }
+        .custom-shape-divider-bottom-1682441385 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        .custom-shape-divider-bottom-1682441385 svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 150px;
+        }
+        .custom-shape-divider-bottom-1682441385 .shape-fill {
+            fill: #FFFFFF;
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .semi-transparent-button {
+            background-color: rgba(255, 78, 80, 0.8);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        .semi-transparent-button:hover {
+            background-color: rgba(255, 78, 80, 1);
+        }
+        .navbar-blur {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-orange-50 font-sans">
+    <header class="navbar-blur shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-bold gradient-text">World Wide Web Travel</a>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Inicio</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Destinos</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Ofertas</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Experiencias</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Blog</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300">Contacto</a></li>
+                </ul>
+                <button class="md:hidden text-2xl text-gray-700"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="relative h-screen flex items-center justify-center text-white bg-image-overlay">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?travel'); z-index: -1;"></div>
+            <div class="z-10 text-center px-4" data-aos="fade-up">
+                <h2 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">Descubre el mundo con nosotros</h2>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Explora destinos increíbles y vive experiencias únicas que transformarán tu vida</p>
+                <a href="#" class="semi-transparent-button text-white px-8 py-3 rounded-full transition duration-300 text-lg font-semibold inline-block transform hover:scale-105 hover:shadow-lg">Reserva ahora</a>
+            </div>
+            <div class="custom-shape-divider-bottom-1682441385">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <section class="bg-white py-16 shadow-inner relative z-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold mb-8 text-center gradient-text">Encuentra tu próxima aventura</h2>
+                <form class="flex flex-wrap justify-center items-center gap-4 max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+                    <input type="text" placeholder="Destino" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 flex-grow">
+                    <input type="date" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+                    <select class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+                        <option>Tipo de viaje</option>
+                        <option>Playa</option>
+                        <option>Montaña</option>
+                        <option>Ciudad</option>
+                        <option>Aventura</option>
+                        <option>Cultural</option>
+                    </select>
+                    <input type="number" placeholder="Presupuesto" class="px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400">
+                    <button type="submit" class="semi-transparent-button text-white px-6 py-2 rounded-md transition duration-300 transform hover:scale-105 hover:shadow-lg">Buscar</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Destinos populares</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://source.unsplash.com/600x400/?beach" alt="Playa" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Playas paradisíacas</h3>
+                        <p class="text-gray-600 mb-4">Disfruta de las mejores playas del mundo, desde el Caribe hasta el Sudeste Asiático.</p>
+                        <a href="#" class="text-orange-500 hover:underline flex items-center">Explorar destinos <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://source.unsplash.com/600x400/?mountain" alt="Montaña" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Aventuras en la montaña</h3>
+                        <p class="text-gray-600 mb-4">Explora majestuosas cordilleras y disfruta de actividades al aire libre en entornos impresionantes.</p>
+                        <a href="#" class="text-orange-500 hover:underline flex items-center">Descubrir aventuras <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://source.unsplash.com/600x400/?city" alt="Ciudad" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Escapadas urbanas</h3>
+                        <p class="text-gray-600 mb-4">Sumérgete en la cultura y la historia de las ciudades más fascinantes del mundo.</p>
+                        <a href="#" class="text-orange-500 hover:underline flex items-center">Explorar ciudades <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-blue-50 py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Ofertas especiales</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6 hover-scale" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-2xl font-semibold mb-2">Escapada de fin de semana a París</h3>
+                        <p class="text-gray-600 mb-4">3 días / 2 noches desde $499</p>
+                        <ul class="text-gray-600 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Vuelos incluidos</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Hotel 4 estrellas</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Desayuno incluido</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Tour por la ciudad</li>
+                        </ul>
+                        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300 inline-block">Ver oferta</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 hover-scale" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="text-2xl font-semibold mb-2">Aventura en Costa Rica</h3>
+                        <p class="text-gray-600 mb-4">7 días / 6 noches desde $1299</p>
+                        <ul class="text-gray-600 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Vuelos incluidos</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Alojamiento en eco-lodges</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Excursiones guiadas</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Actividades de aventura</li>
+                        </ul>
+                        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300 inline-block">Ver oferta</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 hover-scale" data-aos="fade-up" data-aos-delay="300">
+                        <h3 class="text-2xl font-semibold mb-2">Crucero por el Mediterráneo</h3>
+                        <p class="text-gray-600 mb-4">10 días desde $1599</p>
+                        <ul class="text-gray-600 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Pensión completa</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Visitas a 5 países</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Entretenimiento a bordo</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Excursiones opcionales</li>
+                        </ul>
+                        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition duration-300 inline-block">Ver oferta</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Experiencias Únicas -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Experiencias únicas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://source.unsplash.com/600x400/?safari" alt="Safari" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Safari en África</h3>
+                        <p class="text-gray-600 mb-4">Observa la vida salvaje en su hábitat natural y vive una aventura inolvidable.</p>
+                        <a href="#" class="text-blue-600 hover:underline flex items-center">Descubrir más <i class="fas fa-paw ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://source.unsplash.com/600x400/?northern-lights" alt="Aurora Boreal" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Aurora Boreal en Islandia</h3>
+                        <p class="text-gray-600 mb-4">Contempla el espectáculo natural más impresionante del mundo ártico.</p>
+                        <a href="#" class="text-blue-600 hover:underline flex items-center">Explorar viaje <i class="fas fa-meteor ml-2"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://source.unsplash.com/600x400/?machu-picchu" alt="Machu Picchu" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2">Camino Inca a Machu Picchu</h3>
+                        <p class="text-gray-600 mb-4">Recorre el famoso sendero y descubre la magia de la antigua civilización Inca.</p>
+                        <a href="#" class="text-blue-600 hover:underline flex items-center">Ver itinerario <i class="fas fa-mountain ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Hoteles Aliados -->
+        <section class="bg-gray-100 py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Nuestros Hoteles Aliados</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto" data-aos="fade-up">Descubre los hoteles más lujosos y famosos del mundo, cuidadosamente seleccionados para ofrecerte una experiencia inolvidable</p>
+                
+                <div class="overflow-x-auto" data-aos="fade-up">
+                    <div class="flex space-x-6 pb-8" style="width: max-content;">
+                        <!-- Hotel 1 -->
+                        <div class="w-72 bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 hover-scale">
+                            <img src="https://source.unsplash.com/400x300/?luxury-hotel" alt="Burj Al Arab" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Burj Al Arab</h3>
+                                <p class="text-gray-600">Dubai, EAU</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hotel 2 -->
+                        <div class="w-72 bg-white rounded-lg shadow-lg overflow-hidden flex-shrink-0 hover-scale">
+                            <img src="https://source.unsplash.com/400x300/?resort" alt="Four Seasons Resort Bora Bora" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Four Seasons Resort</h3>
+                                <p class="text-gray-600">Bora Bora, Polinesia Francesa</p>
+                                <div class="mt-4 flex items-center">
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                    <span class="text-yellow-500"><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Continuar con más hoteles... -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección del Mapa -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Explora nuestros destinos</h2>
+            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60986881.07858567!2d-94.50413627230818!3d22.733468641862733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1682439939840!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <!-- Sección de Blog -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Blog de viajes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://source.unsplash.com/600x400/?travel-blog" alt="Blog 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">10 destinos imperdibles para este verano</h3>
+                        <p class="text-gray-600 mb-4">Descubre los lugares más fascinantes para tus próximas vacaciones...</p>
+                        <a href="#" class="text-blue-600 hover:underline">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://source.unsplash.com/600x400/?food-travel" alt="Blog 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Guía gastronómica: sabores del mundo</h3>
+                        <p class="text-gray-600 mb-4">Explora las delicias culinarias de diferentes culturas...</p>
+                        <a href="#" class="text-blue-600 hover:underline">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://source.unsplash.com/600x400/?adventure-travel" alt="Blog 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">5 aventuras extremas para intrépidos</h3>
+                        <p class="text-gray-600 mb-4">Descubre experiencias que desafiarán tus límites...</p>
+                        <a href="#" class="text-blue-600 hover:underline">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección "Por qué elegirnos" -->
+        <section class="bg-blue-50 py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">¿Por qué elegirnos?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center bg-white p-8 rounded-lg shadow-lg hover-scale" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-globe text-5xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Destinos únicos</h3>
+                        <p class="text-gray-600">Ofrecemos una amplia selección de destinos exclusivos en todo el mundo.</p>
+                    </div>
+                    <div class="text-center bg-white p-8 rounded-lg shadow-lg hover-scale" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-dollar-sign text-5xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Mejores precios</h3>
+                        <p class="text-gray-600">Garantizamos los precios más competitivos del mercado.</p>
+                    </div>
+                    <div class="text-center bg-white p-8 rounded-lg shadow-lg hover-scale" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-headset text-5xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Atención 24/7</h3>
+                        <p class="text-gray-600">Nuestro equipo de atención al cliente está disponible las 24 horas, los 7 días de la semana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Testimonios de clientes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover-scale" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/100x100/?portrait" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">María García</p>
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Una experiencia increíble. El viaje superó todas nuestras expectativas."</p>
+                </div>
+                <!-- Repite para los otros dos testimonios -->
+            </div>
+        </section>
+
+        <!-- Sección de Suscripción -->
+        <section class="bg-blue-600 text-white py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-8 text-center" data-aos="fade-up">Suscríbete a nuestro boletín</h2>
+                <p class="text-center mb-8 max-w-2xl mx-auto" data-aos="fade-up">Recibe las mejores ofertas y consejos de viaje directamente en tu bandeja de entrada</p>
+                <form class="max-w-md mx-auto" data-aos="fade-up">
+                    <div class="flex">
+                        <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <button type="submit" class="bg-yellow-500 text-blue-600 px-6 py-2 rounded-r-lg hover:bg-yellow-400 transition duration-300 font-semibold">Suscribirse</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Galería de imágenes interactiva -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Galería de destinos</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" data-aos="fade-up">
+                <div class="relative overflow-hidden rounded-lg hover-scale">
+                    <img src="https://source.unsplash.com/600x400/?travel,landmark" alt="Destino 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <p class="text-white text-lg font-semibold">Torre Eiffel, París</p>
+                    </div>
+                </div>
+                <!-- Repite este bloque para más imágenes -->
+            </div>
+        </section>
+
+        <!-- Calendario de eventos -->
+        <section class="bg-white py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Próximos eventos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-orange-100 rounded-lg p-6 hover-scale" data-aos="fade-up">
+                        <h3 class="text-xl font-semibold mb-2">Festival de Primavera en Japón</h3>
+                        <p class="text-gray-600 mb-2">1 - 15 de abril, 2024</p>
+                        <p class="text-gray-700">Disfruta del espectáculo de los cerezos en flor en todo Japón.</p>
+                    </div>
+                    <!-- Repite este bloque para más eventos -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de reseñas de usuarios -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Lo que dicen nuestros viajeros</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover-scale" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="https://source.unsplash.com/100x100/?portrait" alt="Usuario" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold">María García</p>
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Una experiencia increíble. El viaje superó todas nuestras expectativas."</p>
+                </div>
+                <!-- Repite este bloque para más reseñas -->
+            </div>
+        </section>
+
+        <!-- Mapa interactivo -->
+        <section class="bg-white py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Explora nuestros destinos</h2>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg" data-aos="fade-up">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60986881.07858567!2d-94.50413627230818!3d22.733468641862733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1682439939840!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog de viajes -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Blog de viajes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale" data-aos="fade-up">
+                    <img src="https://source.unsplash.com/600x400/?travel-blog" alt="Blog 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">10 destinos imperdibles para este verano</h3>
+                        <p class="text-gray-600 mb-4">Descubre los lugares más fascinantes para tus próximas vacaciones...</p>
+                        <a href="#" class="text-blue-600 hover:underline">Leer más <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Repite este bloque para más entradas de blog -->
+            </div>
+        </section>
+
+        <!-- Integración de redes sociales -->
+        <section class="bg-orange-100 py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Síguenos en Instagram</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+                    <!-- Aquí irían las imágenes de Instagram -->
+                    <img src="https://source.unsplash.com/300x300/?travel" alt="Instagram 1" class="w-full h-64 object-cover rounded-lg hover-scale">
+                    <!-- Repite este bloque para más imágenes -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot o asistente virtual -->
+        <div class="fixed bottom-4 right-4 z-50">
+            <button class="bg-blue-500 text-white rounded-full p-4 shadow-lg hover:bg-blue-600 transition duration-300">
+                <i class="fas fa-comments text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Sección de sostenibilidad -->
+        <section class="container mx-auto mt-16 px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Nuestro compromiso con la sostenibilidad</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover-scale" data-aos="fade-up">
+                    <i class="fas fa-leaf text-5xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Turismo responsable</h3>
+                    <p class="text-gray-600">Promovemos prácticas de turismo que respetan el medio ambiente y las comunidades locales.</p>
+                </div>
+                <!-- Repite este bloque para más iniciativas de sostenibilidad -->
+            </div>
+        </section>
+
+        <!-- Sección de FAQ -->
+        <section class="bg-white py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-12 text-center gradient-text" data-aos="fade-up">Preguntas frecuentes</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-4" data-aos="fade-up">
+                        <h3 class="text-xl font-semibold mb-2">¿Cómo puedo reservar un viaje?</h3>
+                        <p class="text-gray-600">Puedes reservar fácilmente a través de nuestra página web o contactando con nuestro equipo de atención al cliente.</p>
+                    </div>
+                    <!-- Repite este bloque para más preguntas frecuentes -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de suscripción -->
+        <section class="bg-blue-600 text-white py-16 mt-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold mb-8 text-center" data-aos="fade-up">Suscríbete a nuestro boletín</h2>
+                <p class="text-center mb-8 max-w-2xl mx-auto" data-aos="fade-up">Recibe las mejores ofertas y consejos de viaje directamente en tu bandeja de entrada</p>
+                <form class="max-w-md mx-auto" data-aos="fade-up">
+                    <div class="flex">
+                        <input type="email" placeholder="Tu correo electrónico" class="flex-grow px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                        <button type="submit" class="bg-yellow-500 text-blue-600 px-6 py-2 rounded-r-lg hover:bg-yellow-400 transition duration-300 font-semibold">Suscribirse</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12 mt-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 gradient-text">World Wide Web Travel</h3>
+                    <p class="text-gray-400">Tu compañero de confianza para descubrir el mundo.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enlaces rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Sobre nosotros</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Destinos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Ofertas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Síguenos</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-white transition duration-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                    <p class="text-gray-400">Email: info@wwwtravel.com</p>
+                    <p class="text-gray-400">Teléfono: +1 234 567 890</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p class="text-gray-400">&copy; 2023 World Wide Web Travel. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
